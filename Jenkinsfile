@@ -5,6 +5,8 @@ node ('master') {
   def v = version()
   if (v) {
       echo "Build version ${v}"
+  } else {
+      echo "Build version NOT Provided"
   }
   def mvnHome = tool 'M3'
   env.PATH = "${mvnHome}/bin:${env.PATH}"
